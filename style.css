@@ -1,0 +1,682 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
+}
+body{
+    background-color: rgb(236, 231, 231);
+    margin: 0;
+    padding: 0;
+}
+/* Navigation*/
+.nav{
+    display: flex;
+    height: 60px;
+    width: auto;
+    justify-content: space-between;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 3px 4px grey;
+    z-index: 999;
+}
+
+.nav .logo img{
+    padding: 10px;
+    height: 35px;
+}
+
+.search{
+   display: flex;
+   align-items: center;
+    height: 35px;
+    margin: 10px 0 0;
+   background-color: rgb(220, 224, 224);
+   width: 300px;
+}
+.search input{
+    border: none;
+    margin-left: -10px;
+    color: gray;
+    background-color: transparent;
+}
+.search span{
+    margin-left: 15px;
+}
+.left{
+    display: flex;
+    margin-left: 60px;
+}
+.right{
+    display: flex;
+    margin-right: 60px;
+}
+.right ul{
+    display: flex;
+    list-style: none;
+    border-right: 1px solid rgb(219, 218, 218);
+}
+.right ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.right ul li:hover{
+    color: black;
+}
+
+
+.right img{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    width: auto;
+    height: 40px;
+}
+.right p{
+    width: 180px;
+}
+.right p>a{
+    text-decoration: none;
+    color: rgb(92, 91, 91);
+}
+.right p>a:hover{
+    color: black;
+}
+.right>span{
+ position: absolute;
+ right: 16.5rem;
+ top:43px;
+}
+
+/*---------Under Construction-------------------*/
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+.dropdown span{
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top:43px;
+}
+
+.dropdown-content{
+display: none;
+background-color:white;
+min-width: 300px;
+position: absolute;
+top: 70px;
+right: 10px;
+border: 1px solid gray;
+}
+
+.dropdown:hover .dropdown-content{
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    gap: 4px 0;
+}
+
+.dropdown-content .upper{
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.dropdown-account{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3px 3px;
+}
+.upper button{
+    background-color: #fff;
+    border: 2px solid #045be6;
+    width: 95%;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #045be6;
+    margin-left: 7px;
+}
+.dropdown-content button:hover{
+    cursor: pointer;
+    background-color: #cbdaf3;
+}
+.dropdown-account div{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+.dropdown-account div h3{
+   margin-bottom: -12px;
+   font-size: 17px;
+}
+.dropdown-account img{
+    width: 50px;
+    height: 50px;
+}
+.dropdown-account div p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+}
+.lower{
+    border-bottom:1px solid gray;
+}
+.lower a{
+    color:#777;
+    text-decoration: none;
+    display: block;
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2;
+}
+.lower a:hover{
+    text-decoration: underline;
+}
+
+
+.lower a:nth-child(2){
+    font-weight: bold;
+}
+.lower a:nth-child(2):hover{
+    color: #045be6;
+    text-decoration: none;
+}
+.lower p{
+    padding-left: 5px;
+    line-height: 0;
+    font-weight: 600;
+    font-size: 17px;
+}
+.manage{
+    border-bottom: 1px solid gray;
+}
+.manage p{
+    padding-left:5px ;
+    line-height: 0;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.manage a{
+    color:#777;
+    text-decoration: none;
+    display: block;
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.manage a:hover{
+    text-decoration: underline; 
+}
+
+.signout a{
+    color:#777;
+    text-decoration: none;
+    display: block;
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2;
+}
+.signout a:hover{
+    text-decoration: underline;
+}
+
+
+
+/*-----------------------------------------------------------*/
+
+/* Main Body */
+.container{
+    display:flex;
+    margin: 30px 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/*----Left-Panel--------*/
+.left-panel{
+  flex-basis: 22%;
+  align-self: flex-start;
+ 
+}
+.sidebar-profile-box{
+    background: #fff;
+    border-radius: 10px;
+}
+.sidebar-profile-box img{
+    /* width: 100%;
+    height: 65px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.sidebar-profile-info{
+    padding: 0 25px;
+    text-align: center;
+    
+}
+.sidebar-profile-info img{
+    width: 70px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 4px;
+    margin-top: -45px;
+}
+
+.sidebar-profile-info h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+.sidebar-profile-info h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+}
+.side-profile-connect ul{
+    list-style: none;
+    /* text-align: left; */
+    margin: 20px 10px 20px -25px;
+}
+.side-profile-connect ul li{
+    width: 100%;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #777;
+    font-weight: bold;
+}
+.side-profile-connect ul li span{
+    float: right;
+    color: #045be6;
+}
+.side-profile-connect ul p{
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.sidebar-hover-box{
+    border-top: 1px solid gray;
+}
+.sidebar-hover-box:hover{
+    background-color:rgb(213, 217, 220) ;
+}
+.sidebar-profile-links{
+    cursor: pointer;
+    margin: 10px 10px 5px 12px;
+}
+.sidebar-profile-links p{
+    color: #777;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.sidebar-profile-links p:last-child{
+    color: #222;
+    margin: -12px 0 5px 0;
+}
+
+.sidebar-profile-items{
+    display: flex;
+    border-top: 1px solid gray;
+}
+.sidebar-profile-items:hover{
+    background-color: rgb(213, 217, 220);
+    cursor: pointer;
+}
+.sidebar-profile-items img{
+    width: 15px;
+    margin: 10px 0 10px 12px;
+}
+.sidebar-profile-items a{
+    text-decoration: none;
+    color: #222;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.sidebar-box{
+    background: #fff;
+    margin-top: 8px;
+    border-radius: 10px;
+    position: sticky; /*Not Working here so haven't applied on right panel also*/
+    top: 100px;
+    z-index: 100;
+}
+
+.sidebar-activity{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 10px;
+   
+}
+.sidebar-activity h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: #045be6;
+    margin: 7px 7px 7px 0;
+}
+.sidebar-activity a{
+    text-decoration: none;
+    color: #777;
+}
+.group-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.group-logo a{
+    margin-top: -16px;
+    margin-left: 30px;
+}
+.group-logo span{
+    width: 2px;
+    cursor: pointer;
+    color: #777;
+}
+
+
+/*----Right-Panel--------*/
+
+
+.right-panel{
+    flex-basis: 27%;
+    align-self: flex-start;
+    
+  }
+
+  .sidebar-news{
+    background: #fff;
+    padding: 2px 13px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .sidebar-news h3{
+    font-size: 17px;
+  }
+  .sidebar-news img{
+    width: 15px;
+    float: right;
+    margin-top: 17px;
+    cursor: pointer;
+  }
+
+  .sidebar-news ul{
+    font-size: 15px;
+    position: relative;
+    right: 20px;
+  }
+  .sidebar-news ul li:hover{
+    background-color: #c9cbcd;
+    width: 100%;
+  }
+  .sidebar-news ul li span{
+   display: block;
+   color: #777;
+   font-size: 12px;
+   font-weight: normal;
+  }
+  .sidebar-news ul li{
+    margin: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+.sidebar-feeds{
+    background: #fff;
+    padding: 2px 13px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.sidebar-feeds h3{
+    font-size: 17px;
+}
+.sidebar-feeds img{
+    width: 15px;
+    float: right;
+    margin-top: 17px;
+    cursor: pointer;
+}
+
+.sidebar-feeds .company-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sidebar-feeds .company-block .company-details{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-feeds .company-block img{
+    width: 50px;
+    margin: 0 8px 18px 0;
+}
+.sidebar-feeds .company-block a{
+    text-decoration: none;
+    display: block;
+    color: #222;
+    font-weight: bold;
+}
+
+.sidebar-feeds .company-block span{
+    font-size: 14px;
+    color: #777;
+}
+
+.sidebar-feeds .company-block button{
+    border-radius: 50px;
+    width: 150px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid black;
+}
+
+.sidebar-useful-links{
+    padding: 5px 25px;
+    text-align: center;
+}
+.sidebar-useful-links a{
+    text-decoration: none;
+    color: #777;
+    font-size: 13px;
+    margin: 0 6px;
+    display: inline-block;
+}
+.sidebar-useful-links a:hover{
+    color:#045be6;
+    text-decoration: underline;
+}
+
+/*-----Footer--------*/
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer h2{
+    font-size: 14px;
+    color: #045be6;
+    font-weight:bolder;
+}
+.footer img{
+    width: 15px;
+    height: 15px;
+}
+.footer p{
+    font-size: 14px;
+    margin-left: 3px;
+}
+
+/*----Middle-Panel--------*/
+
+.middle-panel{
+    flex-basis: 47%;
+}
+
+.create-post{
+    background: #fff;
+    border-radius: 10px;
+}
+
+.create-post-input{
+    padding: 10px 20px 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.create-post-input img{
+    border-radius: 50%;
+    width: 60px;
+    margin-right: 10px;
+}
+.create-post-input textarea{
+    border-radius: 30px;
+    width: 100%;
+    border: 0.5px solid gray;
+    background: transparent;
+    outline: 0;
+    resize: none;
+    margin-top: 14px;
+}
+.create-post-input textarea[placeholder]{
+ padding: 8px 0 5px 20px;
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.create-post-links{
+    padding-bottom: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.create-post-links li{
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create-post-links li:hover{
+    background-color: #c9cbcd;
+}
+.create-post-links li img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+/*--------------Post--------------------*/
+
+.post{
+    background: #fff;
+    /* padding: 10px 12px 5px; */
+    margin: 7px 0 7px;
+    /* position: relative; */
+}
+
+.post p{
+    padding: 0 10px;
+    font-size: 15px;
+}
+.post-author{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 12px 5px;
+    margin-bottom: 20px;
+    /* margin-top: 10px; */
+}
+
+.post-author img{
+    width: 50px;
+    margin-right: 10px;
+    margin-top: 5px;
+    /* border-radius: 50%; */
+}
+.post-author h1{
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    line-height: 0;
+}
+.post-author div{
+    width: 90%;
+}
+.post-author div small{
+    display:block;
+    margin-bottom: -2px;
+    color: #777;
+}
+
+.post-author span{
+font-weight: bolder;
+cursor: pointer;
+}
+
+.img-posted{
+    width: 100%;
+    /* position: absolute;
+    left: 0;
+    right: 0; */
+}
+
+.post-stats{
+    padding: 3px 4px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.comments{
+    color: #777;
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+    font-size: 14px;
+   
+}
+
+/*-------Post-Like-comment-------------*/
+
+.post-activity-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 0 8px; */
+}
+.post-activity-links div{
+    display: flex;
+    gap: 0 20px;
+    height: 40px;
+    flex-direction: row;
+    color: #777;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 8px;
+    margin: 3px 3px;
+}
+.post-activity-links div:hover{
+    background-color: #c9cbcd;
+    
+}
+.post-activity-links div>span{
+    width: 8px;
+}
+.post-activity-links div>p{
+    font-size: 16px;
+    font-weight: 500;
+}
